@@ -1,0 +1,9 @@
+/*.log
+.DS_Store
+/.idea
+/times-tables.iml
+/target
+/resources/public/js/app.js
+/resources/public/js/out/
+/resources/public/css/
+/dist
