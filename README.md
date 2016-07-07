@@ -1,13 +1,13 @@
 # Times Tables
 
-Simple ClojureScript app to visualize Times Tables. The running app is here [TODO](http://todo). 
+Simple [ClojureScript](https://github.com/clojure/clojurescript) app to visualize 
+the Times Tables. The running app can be found from [here](http://todo). 
 
 ## What is this?
 
 I watched the really interesting [Times Tables video](https://www.youtube.com/watch?v=qhbuKbxJsk8) 
 by [Mathologer](https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg) and I decided
-to write some [ClojureScript](https://github.com/clojure/clojurescript) code to play with
-the idea. This is the result.
+to write some ClojureScriptcode to play with the idea. This is the result.
 
 The code here implements the algorithim presented in the video. It allows users to interactively
 adjust the number of `dots` and the `times` values. The result is drawn on HTML5 canvas.
