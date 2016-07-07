@@ -1,0 +1,45 @@
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #3a3a3a;
+}
+#app {
+  display: flex;
+  flex-flow: column;
+}
+.page {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+.controls {
+  display: flex;
+  flex-flow: row;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightgrey;
+  padding: 2px 5px;
+}
+.col {
+  display: flex;
+  flex-flow: column;
+}
+.col.labels {
+  align-items: flex-end;
+}
+.col.range {
+  flex: 1;
+}
+.col span {
+  padding: 2px 5px;
+}
+.col input {
+  padding: 2px 5px;
+}
+canvas {
+  flex: 1;
+}
