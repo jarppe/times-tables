@@ -53,8 +53,8 @@
     (.stroke)))
 
 (defn draw-lines [{:keys [dctx r dots times]}]
-  (aset dctx "stokeStyle" (u/rgb 192 32 32))
-  (aset dctx "stokeWidth" 2)
+  (aset dctx "strokeStyle" (u/rgb 128 128 128))
+  (aset dctx "lineWidth" 1)
   (let [dots-value (:value dots)
         times-value (:value times)
         da (/ PIx2 dots-value)]
