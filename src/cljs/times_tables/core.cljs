@@ -42,8 +42,10 @@
 (defn page [state]
   (let [{:keys [dots times]} @state
         ctx {:dots {:value dots
+                    :speed 0.1
                     :set-value (partial set-dots state)}
              :times {:value times
+                     :speed 0.01
                      :set-value (partial set-times state)}}]
     [:div.page
      [controls ctx]

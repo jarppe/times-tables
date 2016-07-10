@@ -89,6 +89,7 @@
 
 (defn init-times-table [this]
   (.addEventListener js/window "resize" (fn [_]
+                                          (.scroll js/window 0 0)
                                           (redraw-times-table this)))
   (doto (r/dom-node this)
     (.addEventListener "touchstart" (fn [e]
@@ -104,14 +105,15 @@
                                                :interaction? true
                                                :init-value (:value target)
                                                :set-value (:set-value target)
+                                               :speed (:speed target)
                                                :y sy
                                                :sy sy)
                                         (redraw-times-table this))))
     (.addEventListener "touchmove" (fn [e]
                                      (.preventDefault e)
                                      (let [y (-> e .-touches (aget 0) .-clientY)
-                                           {:keys [init-value set-value sy]} (r/state this)]
-                                       (set-value (->> y (- sy) (* 0.1) (+ init-value)))
+                                           {:keys [init-value set-value speed sy]} (r/state this)]
+                                       (set-value (->> y (- sy) (* speed) (+ init-value)))
                                        (swap! (r/state-atom this) assoc :y y)
                                        (redraw-times-table this))))
     (.addEventListener "touchend" (fn [e]
