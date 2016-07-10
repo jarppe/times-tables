@@ -2,7 +2,7 @@
   (:require [times-tables.util :as u]))
 
 (def min-dots 2)
-(def max-dots 200)
+(def max-dots 400)
 (def increment-dots 1)
 (def min-times 2)
 (def max-times 102)
