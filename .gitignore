@@ -1,5 +1,6 @@
 /*.log
 .DS_Store
+/.lein-*
 /.idea
 /times-tables.iml
 /target

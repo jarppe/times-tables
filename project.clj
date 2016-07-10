@@ -22,8 +22,7 @@
 
   :profiles {:dev {:plugins [[lein-figwheel "0.5.4-3"]
                              [lein-pdo "0.1.1"]]}
-             :dist {:clean-targets ^:replace ["dist"]
-                    :less {:target-path "dist/css"}}}
+             :dist {:less {:target-path "dist/css"}}}
 
   :cljsbuild {:builds
               [{:id "dev"
@@ -50,6 +49,5 @@
                     ["less" "auto"]]]
             "dist" [["with-profile" "dist"]
                     ["do"
-                     "clean"
                      ["less" "once"]
                      ["cljsbuild" "once" "dist"]]]})

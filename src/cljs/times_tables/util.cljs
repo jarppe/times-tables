@@ -20,6 +20,12 @@
       (if (not (js/isNaN n))
         n))))
 
-(defn ->bound [min-v max-v v]
+(defn bound [min-v max-v v]
   (-> v (max min-v) (min max-v)))
 
+(defn round [decimals v]
+  (let [m (Math/pow 10 decimals)]
+    (-> v
+        (* m)
+        (Math/round)
+        (/ m))))
